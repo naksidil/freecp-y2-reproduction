@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "run_id": "20261112T231415_254311Z",
+  "package_fingerprint": "694ef6b0eb5ffa5b413f132aa85d3d3c72b4d742c5da5323d9b530f817e53755",
+  "protocol_hash": "3277b3d2a256294fa98346804ba925053d4ad35e5d04f0f96959d1c46d703111",
+  "completed_conditions": [
+    "original_baseline",
+    "original_y2",
+    "original_random",
+    "expanded_baseline",
+    "expanded_y2",
+    "expanded_random"
+  ],
+  "attempts": [
+    {
+      "started_utc": "2026-11-12T23:14:15.255163+00:00",
+      "resumed": false,
+      "finished_utc": "2026-11-12T23:35:33.293402+00:00",
+      "ok": true
+    }
+  ],
+  "confirmation_evaluated": true,
+  "baseline_parity_passed": true
+}

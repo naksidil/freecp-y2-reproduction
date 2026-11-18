@@ -1,0 +1,5 @@
+# CPU-only saved-result analysis and report figures; independent of legacy GPU env.
+numpy==1.26.4
+Pillow==10.4.0
+matplotlib==3.9.2
+python-docx==1.1.2

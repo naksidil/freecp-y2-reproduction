@@ -1,0 +1,17 @@
+[
+  {
+    "image_id": "2007_001764",
+    "image_sha256": "6e6ba61fe239d4f2b504cf37a34400a80060a5610823b828f5e631f58436e143",
+    "gt_sha256": "3ef2a70d7f12e2b5133f06ca13ca4a9b7900e6484a4b30a5af43df3e0eadc1e9"
+  },
+  {
+    "image_id": "2007_003580",
+    "image_sha256": "abf4d677b0bdc66e77b2ec86c3ec44cc4063a56f9545a51c32d158789fbf15f7",
+    "gt_sha256": "70382bcdce54d5902889cb4579413f9b44b1eee0bf755facbe53158ad78f011c"
+  },
+  {
+    "image_id": "2007_003910",
+    "image_sha256": "3e114182e47207d4b3c4216dd8a86a3231c36dbf59569b354e59af4ec5e5d91a",
+    "gt_sha256": "a7a5c3d0d2ab01aa2005aef8864a8d5e05faef8c88d4579b6a9ac39cbdce2d63"
+  }
+]

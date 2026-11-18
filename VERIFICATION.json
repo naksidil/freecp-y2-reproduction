@@ -1,0 +1,8 @@
+{
+  "cpu_tests": 15,
+  "all_passed": true,
+  "syntax_check": true,
+  "missing_environment_error_zip": true,
+  "local_gpu_run": false,
+  "colab_model_tests": 7
+}

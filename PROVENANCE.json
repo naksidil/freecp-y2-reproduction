@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-12T23:43:44.447885+00:00",
+  "protocol_sha256": "c5ac9914620d130893b5e3bc68c4e86db64b64f3c5bafe1bdd8ecb407650f172",
+  "upstream": "https://github.com/chenqi1126/FreeCP",
+  "commit": "6946aa7999ec5d57d1fe91968ba1ae35a1e53295",
+  "stage08_archive_sha256": "90a359ab8d71aaf712176a121daad4f292512ca697d46c2bcbc3e46770eb5075",
+  "stage08_result_hashes_verified": 3624,
+  "stage08_sources_unchanged": true,
+  "stage08_primary_and_secondary_baseline_comparisons_recomputed": true,
+  "y2_model_sha256": "8a531bd242852d6672e9066bc4971a32221724ce80bfc80922e4424f24342ebb",
+  "y2_model_identical_to_stage08": true,
+  "benchmark_not_evaluated_here": true,
+  "previously_seen_benchmark": true
+}

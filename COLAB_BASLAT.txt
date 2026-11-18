@@ -1,0 +1,38 @@
+# Stage 09: supplemental Y2 benchmark. Requires the stage 02 T4 environment.
+# Reviewed stage 08 evidence is included in the package.
+from google.colab import files
+from pathlib import Path
+import json, subprocess, zipfile
+
+python = Path('/content/freecp_t4/env_py310/bin/python')
+assert python.is_file(), 'Bu oturumda 02 kurulumu bulunamadi. Yalnizca 02 kurulumunu tamamla; 03-08 gerekli degil.'
+
+uploaded = files.upload()
+assert len(uploaded) == 1, 'Yalnizca 09_FreeCP_Y2_Final_Benchmark.zip dosyasini sec.'
+package = next(iter(uploaded))
+folder = Path('/content/freecp_stage9')
+folder.mkdir(exist_ok=True)
+with zipfile.ZipFile(package) as z:
+    assert 'run_y2_benchmark.py' in z.namelist(), 'Yanlis ZIP: 09 paketini sec.'
+    assert all(Path(n).name == n and n not in ('.', '..') for n in z.namelist()), 'Beklenmeyen ZIP yapisi.'
+    z.extractall(folder)
+
+pointer = Path('/content/freecp_t4/latest_y2_benchmark_result.json')
+pointer.unlink(missing_ok=True)
+with subprocess.Popen(
+    [str(python), '-u', str(folder / 'run_y2_benchmark.py')],
+    stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1
+) as process:
+    for line in process.stdout:
+        print(line, end='', flush=True)
+    returncode = process.wait()
+
+if pointer.exists():
+    info = json.loads(pointer.read_text())
+    print('\nTamamlanan kosul:', info['completed_conditions'], '/ 2')
+    print('Benchmark tamamlandi.' if info['ok'] and returncode == 0 else 'Islem durdu; hata ZIP dosyasinda.')
+    if info.get('error'):
+        print(info['error'])
+    files.download(info['archive'])
+else:
+    print('Sonuc ZIP olusmadi. Hucrenin son hata satirlarini paylas.')

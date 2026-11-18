@@ -1,0 +1,9 @@
+GitHub yüklemesi bu oturumda tamamlanamadı. Depo oluşturuldu; şu anda yalnızca geçici README var.
+
+1. FreeCP_Teslim_ve_GitHub_Paketi_v3.zip dosyasını bilgisayarında bir klasöre aç.
+2. https://github.com/naksidil/freecp-y2-reproduction/upload/main adresini kendi tarayıcında aç.
+3. Açtığın klasördeki dosyaların tamamını seçip GitHub ekranına sürükle. Dış ZIP dosyasını tek başına yükleme. İçindeki freecp-y2-source.zip ise olduğu gibi kalmalı; onu ayrıca açma.
+4. Commit changes düğmesine bas.
+5. Yükleme bitince sohbetten haber ver. Dosyaların hash'lerini kontrol edip teslim etiketini oluşturacağız ve rapordaki pending bilgisini kaldıracağız.
+
+Raporda henüz pending yazması kasıtlı: kaynaklar yüklenip etiket oluşturulmadan tamamlanmış teslim iddiasında bulunmuyoruz. Dersin teslim formu da ayrıca doldurulmalı.

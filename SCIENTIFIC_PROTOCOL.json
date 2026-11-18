@@ -1,0 +1,38 @@
+{
+  "version": "09-y2-final-benchmark-v1",
+  "conditions": [
+    {
+      "id": "original_baseline",
+      "expanded": false,
+      "method": "baseline"
+    },
+    {
+      "id": "original_y2",
+      "expanded": false,
+      "method": "y2"
+    }
+  ],
+  "tau": 0.5,
+  "development_sha256": "ffaf04a0466a50db5c0ba7139c4b0bd25b4e590bc70d0da3ecd0c4dd11c2c6bf",
+  "confirmation_sha256": "bb3615e99c763b2d6c233df0358318f09b2466f8f7c3e1804e14739a86837741",
+  "full_val_sha256": "cdc1326d12f69ce5153aa5da04a4d8783e146868d42d19f82f44e74b97ac907d",
+  "source": "Official VOC2012 val1449, already inspected in earlier RP/background experiments.",
+  "role": "Supplementary benchmark under a fixed method, NOT a new untouched confirmatory test.",
+  "preceding_confirmation": "Stage08 run 20261112T231415_254311Z, all 6 conditions completed. Original +0.1577 and expanded +0.2894 mIoU points; both CIs cross zero; expanded gain is driven by one image.",
+  "selection": "Keep the SAME tau=0.5 chosen from stage07 development presence; no change based on stage08.",
+  "contrast": "Y2 minus baseline, K=21/Q=46 only. No random/expanded sweeps or threshold search.",
+  "rule": "Same-window original tensor RP decision OR CLS float32 softmax p>=0.5, BEFORE zeroing; unchanged AP follows.",
+  "model": "OpenAI CLIP ViT-B/16, SCLIP, RP=0.15, AP=0.8, crop384/stride112; same as stage08.",
+  "probability": "All original 26 background and 20 foreground queries in the denominator.",
+  "GT": "Never used to decide predictions. Joined only after inference.",
+  "metric": "Dataset mIoU from summed per-class intersections/unions; void255 ignored.",
+  "uncertainty": "Paired image bootstrap, 5000 draws, seed51100813; descriptive interval on a previously seen benchmark.",
+  "sensitivity": "Leave-one-image-out, affected images/pixels, per-class effects, rescue/AP counts.",
+  "timing": "One warm-up excluded; pipeline time includes audit transfers, not GPU-only time. Single sequential runs do not establish a speedup.",
+  "reference": "Replay original baseline and compare its per-image confusion matrices to the archived 65.76325321069912 result.",
+  "reference_sha256": "9a7122c3f68eba5cb2e2287b0872cb9c022973271af38883dedfb56cd885acca",
+  "no_retuning": true,
+  "confirmation300_rerun": false,
+  "no_other_experiments": true,
+  "result_use": "Report alongside the existing 300-image confirmation; do not replace or hide its uncertainty."
+}
